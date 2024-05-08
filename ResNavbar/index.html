@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../ResNavbar/style.css">
+    <title>NavBar</title>
+</head>
+
+<body>
+    <!-- hearder starts -->
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#"> Web Nav Bar</a> </div>
+            <ul class="links">
+                <li><a href="home">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="service">Service</a></li>
+                <li><a href="contact">Contact</a></li>
+            </ul>
+            <a href="#" class="action_btn">Get Started</a>
+            <div class="toggle_btn">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown_menu ">
+            <li><a href="home">Home</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="service">Service</a></li>
+            <li><a href="contact">Contact</a></li>
+            <li> <a href="#" class="action_btn">Get Started</a></li>
+        </div>
+    </header>
+    <!-- hearder ends -->
+<!-- script starts -->
+
+<script>
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const toggleBtnIcon = document.querySelector('.toggle_btn i')
+    const dropDownMenu = document.querySelector('.dropdown_menu')
+    toggleBtn.onclick = function(){
+        dropDownMenu.classList.toggle('open')
+        const isOpen =dropDownMenu.classList.contains('open')
+        toggleBtnIcon.classList = isOpen
+        ? 'fa fa-close'
+        : 'fa fa-bars'
+    }
+</script>
+<!-- script ends -->
+
+</body>
+
+</html>
